@@ -1,10 +1,31 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Start Page</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    </head>
-    <body>
-        <h1>Hello World!</h1>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/stile.css">
+    <title>Sistema estoque</title>
+</head>
+<body>
+    <header>
+        <h1>Sistema de Estoque</h1>
+    </header>
+    <main class="container">
+        <form action="login" method="post">
+            <div class="content">
+                <h2>Login</h2>
+                <div class="input-box">
+                    <label>Usuário</label>
+                    <input type="text" name="users" class="inputUser" placeholder="Digite seu usuário"/>
+                </div>
+                <div class="input-box">
+                    <label>Senha</label>
+                    <input type="password" name="passw" class="inputPassword" placeholder="Digite sua senha"/>
+                </div>
+                <button type="submit">Entrar</button>
+            </div>
+        </form>
+    </main>
+    <footer></footer>
+</body>
 </html>

@@ -9,18 +9,18 @@ package connection;
  * @author 232.004057
  */
 public class ConnectionFactory {
-   
+    
     //dados do banco
     private static final String DRIVER = "com.mysql.cj.jdbc.Driver";
     private static final String URL =
             "jdbc:mysql://localhost:3306/estoque_db?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC";
     private static final String USER = "root";
     private static final String PASSWORD = "cimatec";
-   
+    
     //métodos
     public static connection getConnection() {
         Connection con = null;
-       
+        
         try {
             class.forName(DRIVER);
             con = DriverManager.getConnection(URL, USER, PASSWORD);
@@ -29,9 +29,9 @@ public class ConnectionFactory {
             System.out.println("Banco de Dados Não Conectado");
             e.printStackTrace();
         }
-       
+        
         return con;
     }
-           
-   
+            
+    
 }
