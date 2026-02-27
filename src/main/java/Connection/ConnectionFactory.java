@@ -1,37 +1,25 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package connection;
 
-/**
- *
- * @author 232.004057
- */
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
 public class ConnectionFactory {
-    
-    //dados do banco
+
     private static final String DRIVER = "com.mysql.cj.jdbc.Driver";
     private static final String URL =
-            "jdbc:mysql://localhost:3306/estoque_db?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC";
+        "jdbc:mysql://localhost:3306/estoque_db?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC";
     private static final String USER = "root";
     private static final String PASSWORD = "cimatec";
-    
-    //métodos
-    public static connection getConnection() {
-        Connection con = null;
-        
+
+    public static Connection getConnection() throws SQLException {
+
         try {
-            class.forName(DRIVER);
-            con = DriverManager.getConnection(URL, USER, PASSWORD);
-            System.out.println("Bando de Dados Conectado");
-        } catch (Exception e) {
-            System.out.println("Banco de Dados Não Conectado");
-            e.printStackTrace();
+            Class.forName(DRIVER);
+        } catch (ClassNotFoundException e) {
+            throw new SQLException("Driver MySQL não encontrado.", e);
         }
-        
-        return con;
+
+        return DriverManager.getConnection(URL, USER, PASSWORD);
     }
-            
-    
 }
