@@ -7,56 +7,56 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-    <body>
-        <header>
-            <h1>Sistema de Estoque</h1>
+ <body>
+        <header id="header">
+            <h1 id="tituloDashbord">SystemStock</h1>
             <nav>
                 <ul>
-                    <li><a href="" >Inicio</a></li>
-                    <li><a href="" >Gerenciamento</a></li>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Gerenciamento</a></li>
                 </ul>
-
             </nav>
         </header>
         <main>
-            <section>
-                <div>
-                    <h2>Entrada</h2>
-                    <p>1.80</p>
+            <section id="resumoEstoque">
+                <div class="card-resumo">
+                    <h2 class="titulo-card">Entrada</h2>
+                    <p class="valor-card">100</p>
                 </div>
-                <div>
-                    <h2>Saida</h2>
-                    <p>80</p>
+                <div class="card-resumo">
+                    <h2 class="titulo-card">Saída</h2>
+                    <p class="valor-card">80</p>
                 </div>
-                <div>
-                    <h2>Total</h2>
-                    <p>20</p>
+                <div class="card-resumo">
+                    <h2 class="titulo-card">Total</h2>
+                    <p class="valor-card">20</p>
                 </div>
             </section>
-            <section>
-                <div>
-                    <label>Data</label>
-                        <input type="date" >
+            <section id="filtro">
+                <div class="grupo=filtro">
+                    <label for="filtroData">Data</label>
+                    <input type="date"> <label>Data</label>
+                        <input type="date" id="filtroData" >
                 </div>
-                <div>
-                    <label>Tipo</label>
-                    <select>
-                        <option>Selecione uma opção</option>
-                        <option>Entrada</option>
-                        <option>Saída</option>
+                <div class="grupo=filtro">
+                    <label for="tipoMovimento"> Tipo </label>
+                    <select id="tipoMovimentação" class="select-filtro">
+                        <option value"">Selecione uma opção</option>
+                        <option value"">Entrada</option>
+                        <option value"">Saída</option>
                     </select>
                 </div>
-                <div>
-                    <label>Pesquisar Tipo</label>
-                    <input type="Text" placeholder="Digite o nome do produto">
+                <div class="grupo=filtro pesquisa-nome">
+                    <label for="pesquisarNome">Pesquisar Item</label>
+                    <input type="Text" id="pesquisarNome" class="input-filtro" placeholder="Digite o nome do produto">
                 </div>
-                <div>
-                    <button>Pesquisar</button>
+                <div class="grupo=filtro botao-pesquisa">
+                    <button id="btnPesquisar">Pesquisar</button>
                 </div>
             </section>
-            <section>
-                <div>
-                    <table>
+            <section id="tabelaEstoqueContainer">
+                <div class="tabela-wrapper">
+                    <table id="tabelaEstoque">
                         <thead>
                             <tr>
                                 <th>Código de Barra</th>
@@ -68,8 +68,8 @@
                                 <th>Total</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
+                        <tbody id="corpoTabela">
+                            <tr class="linha-item">
                                 <td>987654321</td>
                                 <td>Monster E</td>
                                 <td>Monster B. C.</td>
@@ -78,10 +78,10 @@
                                 <td>10,99</td>
                                 <td>10,99</td>
                             </tr>
-                            <tr>
+                            <tr class="linha-item"tr>
                                 <td>987654321</td>
-                                <td>Monster E</td>
-                                <td>Monster B. C.</td>
+                                <td>Palha i</td>
+                                <td>Monster B.C.</td>
                                 <td>Monster</td>
                                 <td>145</td>
                                 <td>10,99</td>
@@ -91,20 +91,19 @@
                     </table>
                 </div>
             </section>
-            <section>
-                <div>
-                    <label>Página</label>
-                    <select>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
+            <section id="paginação">
+                <div class="controle-paginação">
+                    <label for="página">Página</label>
+                    <select id="página">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
                     </select>
                 </div>
-                <div>
-                    <button>Voltar</button>
-                    <button>Próximo</button>
+                <div class="container-btn">
+                    <button id="btnVoltar" class="btnVoltar">Voltar</button>
+                    <button id="btnProximo" class="btnProximo">Próximo</button>
                 </div>
             </section>
         </main>
