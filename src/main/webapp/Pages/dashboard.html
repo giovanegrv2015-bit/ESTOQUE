@@ -3,6 +3,7 @@
     <head>
         <link rel="stylesheet" href="../css/reset.css"/>
         <link rel="stylesheet" href="../css/color.css"/>
+        <link rel="stylesheet" href="../css/dashboard.css"/>
         <title>Dashboard</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,15 +36,14 @@
             <section id="filtro">
                 <div class="grupo=filtro">
                     <label for="filtroData">Data</label>
-                    <input type="date"> <label>Data</label>
-                        <input type="date" id="filtroData" >
+                    <input type="date" id="filtroData" >
                 </div>
-                <div class="grupo=filtro">
+                <div class="grupo-filtro">
                     <label for="tipoMovimento"> Tipo </label>
                     <select id="tipoMovimentação" class="select-filtro">
-                        <option value"">Selecione uma opção</option>
-                        <option value"">Entrada</option>
-                        <option value"">Saída</option>
+                        <option value="">Selecione uma opção</option>
+                        <option value="entrada">Entrada</option>
+                        <option value="saida">Saída</option>
                     </select>
                 </div>
                 <div class="grupo=filtro pesquisa-nome">
@@ -51,7 +51,7 @@
                     <input type="Text" id="pesquisarNome" class="input-filtro" placeholder="Digite o nome do produto">
                 </div>
                 <div class="grupo=filtro botao-pesquisa">
-                    <button id="btnPesquisar">Pesquisar</button>
+                    <button id="btnPesquisar" class="btnPesquisa">Pesquisar</button>
                 </div>
             </section>
             <section id="tabelaEstoqueContainer">
@@ -78,10 +78,10 @@
                                 <td>10,99</td>
                                 <td>10,99</td>
                             </tr>
-                            <tr class="linha-item"tr>
+                            <tr class="linha-item">
                                 <td>987654321</td>
-                                <td>Palha i</td>
-                                <td>Monster B.C.</td>
+                                <td>Palha italiana</td>
+                                <td>M.</td>
                                 <td>Monster</td>
                                 <td>145</td>
                                 <td>10,99</td>
