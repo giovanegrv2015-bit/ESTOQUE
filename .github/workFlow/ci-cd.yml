@@ -1,0 +1,36 @@
+name: CI/CD - Build
+
+on:
+  push:
+    branches:
+      - main
+    pull_request:
+        branches:
+          - main
+          
+jobs:
+  build:
+    name: Build projeto
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout do repositório
+        uses: actions/checkout@v4
+        
+        - name: Configuração Java 21
+          uses: action/setup-java@v4
+          with:
+            java-version: '21'
+            distribuition: 'temurin'
+            cache: maven
+            
+        - name: Build da Aplicação
+          run: mvn clean package -DskipTest
+          
+        - name: Salvar
+            uses: actions/upload-artifact@v4
+            with:
+              name:app-war
+              path:target/*.war
+              retention-day: 7
+            
