@@ -19,11 +19,11 @@ public class LoginServlet extends HttpServlet {
             throws ServletException, IOException {
         
         String usuario = request.getParameter("users");
-        String senha = request.getParameter("passw");
+        String senha = request.getParameter("psw");
         
         UserModel userModel = new UserModel();
         userModel.setUsername(usuario);
-        userModel.settPassword(senha);
+        userModel.setPassword(senha);
         
         UserDAO dao = new UserDAO();
         
