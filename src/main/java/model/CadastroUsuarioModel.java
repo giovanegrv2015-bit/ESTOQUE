@@ -5,39 +5,53 @@ public class CadastroUsuarioModel {
     private int id;
     private String nome;
     private String sobrenome;
+    private String matricula;
     private String cpf;
+    private String sexo;
+    private String dtaNascimento;
+    private String email;
+    private String telefone;
+    private String funcao;
     private long cep;
     private String endereco;
-    private String estado;
-    private String bairro;
-    private String cidade;
     private long numero;
     private String complemento;
+    private String bairro;
+    private String cidade;
+    private String estado;
     private String nomeUsuario;
     private String senha;
-    private String funcao;
-    
-    public CadastroUsuarioModel() {
-    
+
+    public int getId() {
+        return id;
     }
-    
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public String getNome() {
         return nome;
     }
 
-    
     public void setNome(String nome) {
         this.nome = nome;
     }
 
-    
     public String getSobrenome() {
         return sobrenome;
     }
 
-    
     public void setSobrenome(String sobrenome) {
         this.sobrenome = sobrenome;
+    }
+
+    public String getMatricula() {
+        return matricula;
+    }
+
+    public void setMatricula(String matricula) {
+        this.matricula = matricula;
     }
 
     public String getCpf() {
@@ -46,6 +60,46 @@ public class CadastroUsuarioModel {
 
     public void setCpf(String cpf) {
         this.cpf = cpf;
+    }
+
+    public String getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
+    }
+
+    public String getDtaNascimento() {
+        return dtaNascimento;
+    }
+
+    public void setDtaNascimento(String dtaNascimento) {
+        this.dtaNascimento = dtaNascimento;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
+    }
+
+    public String getFuncao() {
+        return funcao;
+    }
+
+    public void setFuncao(String funcao) {
+        this.funcao = funcao;
     }
 
     public long getCep() {
@@ -64,12 +118,20 @@ public class CadastroUsuarioModel {
         this.endereco = endereco;
     }
 
-    public String getEstado() {
-        return estado;
+    public long getNumero() {
+        return numero;
     }
 
-    public void setEstado(String estado) {
-        this.estado = estado;
+    public void setNumero(long numero) {
+        this.numero = numero;
+    }
+
+    public String getComplemento() {
+        return complemento;
+    }
+
+    public void setComplemento(String complemento) {
+        this.complemento = complemento;
     }
 
     public String getBairro() {
@@ -88,20 +150,12 @@ public class CadastroUsuarioModel {
         this.cidade = cidade;
     }
 
-    public long getNumero() {
-        return numero;
+    public String getEstado() {
+        return estado;
     }
 
-    public void setNumero(long numero) {
-        this.numero = numero;
-    }
-
-    public String getComplemento() {
-        return complemento;
-    }
-
-    public void setComplemento(String complemento) {
-        this.complemento = complemento;
+    public void setEstado(String estado) {
+        this.estado = estado;
     }
 
     public String getNomeUsuario() {
@@ -119,13 +173,10 @@ public class CadastroUsuarioModel {
     public void setSenha(String senha) {
         this.senha = senha;
     }
-
-    public String getFuncao() {
-        return funcao;
-    }
-
-    public void setFuncao(String funcao) {
-        this.funcao = funcao;
-    }
-   
+    
+    public CadastroUsuarioModel() {
+    
+    };
 }
+    
+  
