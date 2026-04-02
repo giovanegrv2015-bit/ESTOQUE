@@ -1,14 +1,21 @@
-# CRIAÇÃO DA IMAGEM DOCKER
-FROM tomcat:11.0-jdk21-temurin
+FROM maven:3.9-eclipse-temurin-21 AS build 
 
-# REMOÇÃO DOS ARQUIVOS WEBAPPS DO TOMCAT
-RUN rm -rf /usr/local/tomcat/webapps/*
+workdir /app
 
-#COPIA DOS ARQUIVOS DO LOCALHOST PARA A IMAGEM DOCKER.
-COPY target/app.war /usr/local/tomcat/webapps/ROOT.war
+COPY pom.xml
 
-# ABRIR A PORTA 8080
+run mvndependecy:go-offline
+
+copy src./src
+
+run mvn clean package - DskispTests
+
+ADD from tomcat:11.0-jdk25
+
+run rm - /user/local/tomcat/webapps/*
+
+copy --from=build /app/target/*.war/ust/local/tomcat/webapps/ROOT.war
+
 EXPOSE 8080
 
-# EXECUÇÃO DO DOCKER
-CMD ["catalina.sh", "run"]
+RUN ["catalina.sh", "run"]

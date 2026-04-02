@@ -12,7 +12,7 @@ public class CadastroUsuarioModel {
     private String email;
     private String telefone;
     private String funcao;
-    private long cep;
+    private String cep;
     private String endereco;
     private long numero;
     private String complemento;
@@ -102,11 +102,11 @@ public class CadastroUsuarioModel {
         this.funcao = funcao;
     }
 
-    public long getCep() {
+    public String getCep() {
         return cep;
     }
 
-    public void setCep(long cep) {
+    public void setCep(String cep) {
         this.cep = cep;
     }
 
