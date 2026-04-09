@@ -1,21 +1,21 @@
-FROM maven:3.9-eclipse-temurin-21 AS build 
+FROM maven:3.9-eclipse-temurin-21 AS build
 
-workdir /app
+WORKDIR /app
 
-COPY pom.xml
+COPY pom.xml .
 
-run mvndependecy:go-offline
+RUN mvn dependency:go-offline
 
-copy src./src
+COPY src ./src
 
-run mvn clean package - DskispTests
+RUN mvn clean package -DskipTests
 
-ADD from tomcat:11.0-jdk25
+FROM tomcat:11.0-jdk25-temurin
 
-run rm - /user/local/tomcat/webapps/*
+RUN rm -rf /usr/local/tomcat/webapps/*
 
-copy --from=build /app/target/*.war/ust/local/tomcat/webapps/ROOT.war
+COPY --from=build /app/target/*.war /usr/local/tomcat/webapps/ROOT.war
 
 EXPOSE 8080
 
-RUN ["catalina.sh", "run"]
+CMD ["catalina.sh", "run"]
