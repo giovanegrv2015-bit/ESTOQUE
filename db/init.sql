@@ -40,5 +40,6 @@ create table produtos (
         quantidade BIGINT,
         valor decimal(10,2),
         total decimal(10,2)
+        status varchar(50)
 );
 

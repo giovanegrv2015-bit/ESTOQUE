@@ -12,6 +12,8 @@ public class CadastroProdutoModel {
     private long quantidade;
     private String valor;
     private String total;
+    private String status;
+
     
     public CadastroProdutoModel() {
         
@@ -89,4 +91,11 @@ public class CadastroProdutoModel {
         this.total = total;
     }
     
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
 }
