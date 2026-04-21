@@ -13,7 +13,7 @@ async function carregarEstoque() {
                     <td>${item.nomeProduto}</td>
                     <td>${item.fabricante}</td>
                     <td>${item.marca}</td>
-                    <td>${item.dataFabricaco}</td>
+                    <td>${item.dataFabricacao}</td>
                     <td>${item.dataVencimento}</td>
                     <td>${item.quantidade}</td>
                     <td>${item.valor}</td>

@@ -13,7 +13,7 @@ import model.CadastroProdutoModel;
 public class CadastroProdutosDAO {
     public boolean salvar(CadastroProdutoModel produto){
         String sql = "INSERT INTO produtos "+
-                     "codigo_barras, nome_produto, fabricante, marca, data_fabricacao, data_vencimento, quantidade, valor, total, status"+
+                     "(codigo_barras, nome_produto, fabricante, marca, data_fabricacao, data_vencimento, quantidade, valor, total, status) "+
                      "VALUE (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         
         try (Connection conn = ConnectionFactory.getConnection();

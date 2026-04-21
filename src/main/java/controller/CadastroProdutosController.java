@@ -9,7 +9,7 @@ import java.io.IOException;
 import model.CadastroProdutoModel;
 import dao.CadastroProdutosDAO;
 
-@WebServlet("/cadastroproduto")
+@WebServlet("/cadastroProdutos")
 public class CadastroProdutosController extends HttpServlet {
 
     @Override
@@ -19,10 +19,10 @@ public class CadastroProdutosController extends HttpServlet {
         CadastroProdutoModel produto = new CadastroProdutoModel();
 
         produto.setCodigoBarras(request.getParameter("codigoBarras"));
-        produto.setNomeProduto(request.getParameter("nomeProdutos"));
+        produto.setNomeProduto(request.getParameter("nomeProduto"));
         produto.setFabricante(request.getParameter("fabricante"));
         produto.setMarca(request.getParameter("marca"));
-        produto.setDataFabricacao(request.getParameter("dataFabricaco"));
+        produto.setDataFabricacao(request.getParameter("dataFabricacao"));
         produto.setDataVencimento(request.getParameter("dataVencimento"));
         produto.setQuantidade(Long.parseLong(request.getParameter("quantidade")));
         produto.setValor(request.getParameter("valor"));
@@ -34,7 +34,7 @@ public class CadastroProdutosController extends HttpServlet {
         if (dao.salvar(produto)) {
             response.sendRedirect("pages/dashboard.html");
         } else {
-            response.sendRedirect("pages/cadastroProduto.html");
+            response.sendRedirect("pages/cadastroProdutos.html");
         }
     }
 }
