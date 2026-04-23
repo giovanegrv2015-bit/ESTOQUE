@@ -54,6 +54,8 @@ public class CadastroProdutosDAO {
                 p.setNomeProduto(rs.getString("nome_produto"));
                 p.setFabricante(rs.getString("fabricante"));
                 p.setMarca(rs.getString("marca"));
+                p.setDataFabricacao(rs.getDate("data_fabricacao").toLocalDate().toString());
+                p.setDataVencimento(rs.getDate("data_vencimento").toLocalDate().toString());
                 p.setQuantidade(rs.getLong("quantidade"));
                 p.setValor(rs.getString("valor"));
                 p.setValor(rs.getString("total"));

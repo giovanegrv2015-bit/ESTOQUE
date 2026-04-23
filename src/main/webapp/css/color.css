@@ -1,8 +1,8 @@
 :root {
     /* Cores principais */
-    --primary-dark: #0f4c75;
-    --primary-medium: #3282b8;
-    --primary-light: #bbe1fa;
+    --primary-dark: #6d4c41;
+    --primary-medium: #8d6e63;
+    --primary-light: #d7ccc8;
 
     /* Cor de ação (botões / confirmação) */
     --success: #1b9c85;
@@ -16,5 +16,6 @@
 
     /* Sombra */
     --shadow-default: rgba(0, 0, 0, 0.2);
+    
     
 }
